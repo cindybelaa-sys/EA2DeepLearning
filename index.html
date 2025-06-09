@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FFNN Regression</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="plotly.min.js"></script>
+  <script src="tf.min.js"></script>
+</head>
+<body>
+  <h1>Regression mit Feed-Forward Neural Network (FFNN)</h1>
+
+  <section>
+    <h2>R1: Datensätze</h2>
+    <div class="row">
+      <div id="r1-left" class="plot"></div>
+      <div id="r1-right" class="plot"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>R2: Modell-Vorhersage (ohne Rauschen)</h2>
+    <div class="row">
+      <div id="r2-left" class="plot"></div>
+      <div id="r2-right" class="plot"></div>
+    </div>
+    <p id="loss-r2"></p>
+  </section>
+
+  <section>
+    <h2>R3: Modell-Vorhersage Best-Fit (mit Rauschen)</h2>
+    <div class="row">
+      <div id="r3-left" class="plot"></div>
+      <div id="r3-right" class="plot"></div>
+    </div>
+    <p id="loss-r3"></p>
+  </section>
+
+  <section>
+    <h2>R4: Modell-Vorhersage Overfit (mit Rauschen)</h2>
+    <div class="row">
+      <div id="r4-left" class="plot"></div>
+      <div id="r4-right" class="plot"></div>
+    </div>
+    <p id="loss-r4"></p>
+  </section>
+
+  <section>
+    <h2>Diskussion</h2>
+    <p id="discussion">
+      <!-- Hier später Diskussion einfügen -->
+    </p>
+  </section>
+
+  <section>
+    <h2>Dokumentation</h2>
+    <h3>Technisch:</h3>
+    <p>TensorFlow.js zur Modellerstellung und -training, Plotly.js zur Darstellung der Daten und Ergebnisse.</p>
+
+    <h3>Fachlich:</h3>
+    <p>Die Modelle nutzen zwei Hidden Layers mit je 100 ReLU-Neuronen, Adam Optimizer und MSE-Loss. Es wurden verschiedene Epochenzahlen getestet, um das Overfitting sichtbar zu machen.</p>
+  </section>
+
+  <script src="main.js"></script>
+</body>
+</html>
