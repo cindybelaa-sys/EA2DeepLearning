@@ -111,15 +111,15 @@ function plotPrediction(divId, x, yTrue, yPred, labelTrue = 'True', labelPred = 
     y: yTrue,
     mode: 'markers',
     name: labelTrue,
-    marker: { color: 'gray' }
+    marker: { color: 'blue' }
   };
 
   const predTrace = {
     x: x,
     y: yPred,
-    mode: 'lines',
+    mode: 'markers',
     name: labelPred,
-    line: { color: 'green' }
+    line: { color: 'red' }
   };
 
   Plotly.newPlot(divId, [trueTrace, predTrace], {
